@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="style-sign.css">
+  </head>
+  <body class='image-background'>
+        <h1 class="animate-bottom" id="myh1">Registration</h1>
+      <form method='post' action="dbconnect.php" data-parsley-validate
+      id="myform" class="animate-bottom">
+        <div class="form-row">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-row" style="margin-bottom: 5px;">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-row">
+          <label for="password" style="font-size: 16.35px;">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
+        
+        <div class="form-row">
+          <label for="name">Full-Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <input type="submit" value="Submit" id="mysubmit">
+      </form>
+
+      <div id="loader" class="hide"></div>
+
+      <br><br>
+      <a href="index.html">
+        <button class="animate-bottom" id="myback">Back</button>
+      </a>
+  </body>
+  <script>
+        var password = document.getElementById("password")
+      , confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+      if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+      } else {
+        confirm_password.setCustomValidity('');
+      }
+    }
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+  </script>
+
+<script>
+  var form = document.getElementById("myform");
+  var loader = document.getElementById("loader");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    loader.classList.remove("hide"); // Show the loader
+    document.getElementById("myform").style.display = "none";
+    document.getElementById("mysubmit").style.display = "none";
+    document.getElementById("myh1").style.display = "none";
+    document.getElementById("myback").style.display = "none";
+    setTimeout(function() {
+      form.submit();
+    }, 3000);
+  });
+</script>
+
+</html>
+
+
+

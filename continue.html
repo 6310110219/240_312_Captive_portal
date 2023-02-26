@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.image-background {
+  height: 100vh;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+    form {
+      margin-top: 50px;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      display: inline-block;
+      text-align: left;
+    }
+    h1 {
+      text-align: center;
+    }   
+    .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+    @-webkit-keyframes animatebottom {
+      from { bottom:-20px; opacity:0 } 
+      to { bottom:0px; opacity:1 }
+    }
+    @keyframes animatebottom { 
+      from{ bottom:-20px; opacity:0 } 
+      to{ bottom:0; opacity:1 }
+    }
+
+    a[type="btn_continue"] {
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      width: min-content;
+      display: block;
+      margin: 20px auto 0;
+    }
+    a[type="btn_continue"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+  <body  class='image-background'>
+    <div>
+      <form id="myform" class="animate-bottom">
+        <h1 class="animate-bottom" id="myh1">Login Successful!</h1>
+        <a type="btn_continue" onclick="closeWindow();">Continue</a>
+      </form>
+    </div>
+  </body>
+  <script>
+    function closeWindow() {
+      window.close();
+    }
+    </script>
+</html>

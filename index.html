@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style-login.css">
+  </head>
+  <body class='image-background'>
+    <div>
+      <img id ="mypic" class="freewifi" src="free_wifi.png">
+    </div>
+    <h1 class="animate-bottom" id="myh1">Login</h1>
+    <form action="login.php" method="post"
+        id="myform" class="animate-bottom">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" >
+      </div>
+      <div>
+        <input type="submit" value="Submit" id="mysubmit">
+      </div>
+    </form>
+    <br><br>
+    <a href="sign_up.html">
+      <button class="animate-bottom" id="mysignup">Sign Up</button>
+    </a>
+    <div id="loader" class="hide"></div>
+  </body>
+
+  <script>
+    var form = document.getElementById("myform");
+    var loader = document.getElementById("loader");
+  
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      loader.classList.remove("hide"); // Show the loader
+      document.getElementById("mypic").style.display = "none";
+      document.getElementById("myform").style.display = "none";
+      document.getElementById("mysubmit").style.display = "none";
+      document.getElementById("myh1").style.display = "none";
+      document.getElementById("mysignup").style.display = "none";
+      setTimeout(function() {
+      form.submit();
+      }, 5000);
+    });
+  
+  </script>
+</html>
