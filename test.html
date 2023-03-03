@@ -1,0 +1,98 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><!--
+	Copyright (C) 2013
+	No part of this file may be used without permission.
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>Internet Service :: Login successfully</title>
+<link href="theme.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+<!--
+var reqUrl="http://www.google.co.th";
+var timeout = 10;
+var timer;
+var btnObj;
+
+// function focus() {
+// 	btnObj = document.getElementById('btnCont');
+// 	btnObj.focus();
+// 	count();
+// }
+
+// function count() {
+// 	if (timeout > 0) {
+// 			btnObj.value = "Continue " + "(" + timeout + ")";
+// 			timeout--;
+// 			timer = setTimeout("count()",1000);
+// 		} else {
+// 			btnObj.value = "Continue";
+// 			clearTimeout (timer);
+// 		go();
+// 	}
+// }
+
+function go() {
+	var url = geturl();
+		if (url) {
+			location.assign(url);
+		} else {
+			btnObj.disabled = true;
+		}
+	}
+
+function geturl() {
+	if (reqUrl.length != 0 && reqUrl != "%requrl") {
+		return reqUrl;
+	}
+	return false;
+}
+//-->
+</script>
+</head>
+<body onload="javascript:focus();">
+<div id="wrapper">
+	<div id="topLogo"><img src="images/toplogo.jpg" alt="toplogo"></div>
+	<div id="content">
+	<div id="leftLogo"></div>
+	<h1>Login successfully</h1>
+	<hr>
+	<p>Welcome to Internet Service, You can type 'logout.' in address bar and hit enter to logout.</p>
+	</div>
+	<div id="usagebar">
+			 <table width="0" border="0" cellspacing="0" cellpadding="3">
+			<tbody><tr>
+              <td>Policy/Package:</td>
+              <td></td>
+            </tr>
+			 <tr>
+              <td>Time remain:</td>
+              <td>∞</td>
+            </tr>
+            <tr>
+              <td>Time quota:</td>
+              <td>∞</td>
+            </tr>
+			<tr>
+              <td>Transfer remain</td>
+              <td>∞</td>
+			</tr>
+			<tr>
+              <td>Transfer quota</td>
+              <td>∞</td>
+			</tr>
+			 <tr>
+              <td>Valid/Expire date:</td>
+              <td>∞</td>
+			</tr>
+          </tbody></table>
+	</div>
+	<div id="formbar">
+	<input name="btnCont" type="button" id="btnCont" value="Continue (7)" onclick="javascript:go();">
+	</div>
+	<div id="footer">© 2013  N.V.K.INTER CO.,LTD</div>
+	<div><img src="images/shadow.png" width="720" height="6" alt="shadow"></div>
+</div>
+
+<style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style></body></html>

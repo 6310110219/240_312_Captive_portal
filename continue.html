@@ -73,13 +73,34 @@
     <div>
       <form id="myform" class="animate-bottom">
         <h1 class="animate-bottom" id="myh1">Login Successful!</h1>
-        <a type="btn_continue" onclick="closeWindow();">Continue</a>
+        <a id="continue-btn" type="btn_continue" onclick="stopTimer(); closeWindow();">Continue (5)</a>
       </form>
     </div>
   </body>
   <script>
+    var timeoutID;
+    var count = 5;
     function closeWindow() {
       window.close();
     }
+    function updateButton() {
+			count--;
+			if (count > 0) {
+				document.getElementById("continue-btn").innerHTML = "Continue (" + count + ")";
+			} else {
+				closeWindow();
+			}
+		}
+		
+		function startTimer() {
+			timeoutID = setInterval(updateButton, 1000);
+		}
+		
+		function stopTimer() {
+			clearInterval(timeoutID);
+			closeWindow();
+		}
+		
+		startTimer();
     </script>
 </html>
